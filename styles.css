@@ -1,57 +1,20 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111; /* Mørkere baggrund */
-    color: #ddd; /* Lysere tekstfarve */
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #222; /* Lettere sort baggrund */
-    border-bottom: 1px solid #444;
-}
-
-header h1 {
-    color: #F0B90B; /* Binance-gul farve */
-}
-
-header p {
-    color: #aaa; /* Lysere grå farve */
-}
-
-.market-info, .chart {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #333;
-    background-color: #222;
-    border-radius: 10px;
-}
-
-.market-info h2, .chart h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #F0B90B; /* Gul farve */
-}
-
-#tradingview_chart, #tradingview-widget, #technical-analysis-widget {
-    border: 1px solid #444; /* Lysere kantfarve */
-    margin-top: 10px;
-    background-color: #333; /* Baggrundsfarve for widgets */
-}
-
-/* Justering af dropdown-menuen */
-select {
-    background-color: #333;
-    color: #ddd;
-    border: 1px solid #555;
-    padding: 5px;
-    margin: 10px 0;
+/* Tilføj følgende til style.css */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
+}
+
+#longButton {
+    background-color: #ccc;
+}
+
+#shortButton {
+    background-color: #ccc;
+}
+
+button:hover {
+    opacity: 0.8;
 }
