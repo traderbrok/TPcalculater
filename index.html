@@ -3,50 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP & SL Calculator</title>
+    <title>Brok's Finance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Broks Finance's</h1>
+        <header class="main-header">
+            <h1>Brok's Finance</h1>
             <p>Live Market Data, Chart Analysis, and Trading Calculations</p>
         </header>
-
-        <main>
-            <!-- TP & SL Kalkulator Sektion -->
-            <section class="calculator">
-                <h2>TP & SL Calculator</h2>
-                <div>
-                    <button id="longButton" onclick="setTradeType('long')">Long</button>
-                    <button id="shortButton" onclick="setTradeType('short')">Short</button>
-                </div>
-                <br>
-                <label for="entryPrice">Entry Price:</label>
-                <input type="number" id="entryPrice" placeholder="Enter entry price" step="0.01">
-                <br>
-                <label for="usdAmount">Trade Size (USD):</label>
-                <input type="number" id="usdAmount" placeholder="Enter trade size in USD" step="0.01">
-                <br>
-                <label for="leverage">Leverage:</label>
-                <input type="number" id="leverage" placeholder="Enter leverage" value="1">
-                <br>
-                <button onclick="calculateTPSL()">Calculate TP & SL</button>
-                <div id="results">
-                    <h3>Take-Profit Points:</h3>
-                    <ul id="tpPoints"></ul>
-                    <h3>Stop-Loss Points:</h3>
-                    <ul id="slPoints"></ul>
-                </div>
-            </section>
-
-            <!-- Sektion for Gemte Resultater -->
-            <section class="saved-results">
-                <h2>Saved Trades</h2>
-                <div id="savedResultsContainer"></div>
-            </section>
-        </main>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
