@@ -1,19 +1,159 @@
-button {
+/* Grundlæggende opsætning */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Sort baggrund */
+    color: #ddd; /* Lys grå tekst */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #F0B90B; /* Binance gul farve til overskrift */
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #aaa; /* Lys grå undertekst */
+}
+
+/* Market Info Sektion */
+.market-info, .chart, .calculator, .saved-results {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #1c1c1c; /* Mørkere baggrund til sektioner */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.market-info h2, .chart h2, .calculator h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #F0B90B; /* Gul farve til sektionstitler */
+}
+
+.market-info label, .calculator label {
+    display: block;
+    margin-top: 10px;
+    color: #ddd; /* Lys tekstfarve */
+}
+
+.market-info p, .calculator p, .saved-results p {
+    margin: 5px 0;
+}
+
+/* TP & SL Calculator Styling */
+.calculator input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ddd;
+}
+
+.calculator button {
+    background-color: #F0B90B; /* Gul farve til knapper */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.calculator button:hover {
+    background-color: #e5a80e; /* Mørkere gul ved hover */
+}
+
+#longButton, #shortButton {
     margin: 5px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    color: #fff;
 }
 
 #longButton {
-    background-color: #ccc;
+    background-color: #28a745; /* Grøn farve til Long knap */
 }
 
 #shortButton {
-    background-color: #ccc;
+    background-color: #dc3545; /* Rød farve til Short knap */
 }
 
 button:hover {
     opacity: 0.8;
 }
+
+/* Resultat Styling */
+#results {
+    margin-top: 20px;
+}
+
+#tpPoints, #slPoints {
+    list-style-type: none;
+    padding: 0;
+}
+
+.loss-point {
+    color: #ff6b6b; /* Rød farve for SL */
+}
+
+.gain-point {
+    color: #28a745; /* Grøn farve for TP */
+}
+
+/* Saved Trades Sektion */
+.saved-results .result-box {
+    background-color: #2b2b2b;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.saved-results .result-box h3 {
+    color: #F0B90B;
+}
+
+.saved-results .result-box p {
+    margin: 5px 0;
+}
+
+.saved-results .result-box button {
+    background-color: #ff4b4b; /* Rød farve til slet-knap */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.saved-results .result-box button:hover {
+    background-color: #e53b3b;
+}
+
+/* Chart Sektion */
+.chart canvas {
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.chart h2 {
+    font-size: 24px;
+    color: #F0B90B; /* Sektionstitel i gul */
+}
+
