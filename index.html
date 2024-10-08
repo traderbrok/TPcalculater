@@ -1,17 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brok's Finance</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Brok-nance$ Trading Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="main-header">
-            <h1>Brok's Finance</h1>
-            <p>Live Market Data, Chart Analysis, and Trading Calculations</p>
-        </header>
+    <div class="header">
+        <h1>Brok-nance$</h1>
+        <p>Market Overview, Chart Analysis, and Trading Insights</p>
+    </div>
+
+    <div class="market-overview">
+        <!-- TradingView Market Overview Widget -->
+        <div class="tradingview-widget-container">
+            <div id="market_overview_widget"></div>
+            <script type="text/javascript">
+                new TradingView.widget({
+                    "container_id": "market_overview_widget",
+                    "width": "100%",
+                    "height": 400,
+                    "symbol": "BINANCE:BTCUSDT",
+                    "interval": "D",
+                    "theme": "dark",
+                    "style": "1",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_legend": false,
+                    "save_image": false,
+                    "studies": ["RSI@tv-basicstudies"],
+                    "show_popup_button": true,
+                    "popup_width": "1000",
+                    "popup_height": "650"
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="candlestick-chart">
+        <!-- TradingView Candlestick Chart Widget -->
+        <div class="tradingview-widget-container">
+            <div id="candlestick_chart_widget"></div>
+            <script type="text/javascript">
+                new TradingView.widget({
+                    "container_id": "candlestick_chart_widget",
+                    "width": "100%",
+                    "height": 600,
+                    "symbol": "BINANCE:BTCUSDT",
+                    "interval": "60",
+                    "theme": "dark",
+                    "style": "1",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_legend": false,
+                    "save_image": false,
+                    "studies": ["MACD@tv-basicstudies"],
+                    "show_popup_button": true,
+                    "popup_width": "1000",
+                    "popup_height": "650"
+                });
+            </script>
+        </div>
     </div>
 </body>
 </html>
